@@ -13,7 +13,6 @@ import matplotlib.pyplot as plt
 t = ''
 for p in range(1, 6) :
     r = requests.get("https://www.kinopoisk.ru/lists/movies/series-top250/?page=" + str(p))
-    #print(r.text)
     sleep(5)
     t += r.text 
 soup = BS( t, features="html.parser")
@@ -29,7 +28,7 @@ for film in all_s :
     try :
         found = re.search(' • (.+?)\xa0', g).group(0)
     except AttributeError :
-        found = 'XXX' # error handling
+        found = 'No genre found' # error message
 
     f = found[3:-1]
     genre.append( f )
