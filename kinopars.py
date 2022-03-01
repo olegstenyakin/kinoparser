@@ -38,8 +38,6 @@ for film in all_s :
 #
 from collections import Counter
 c = Counter(genre)
-#print(c, len(c))
-#print(c.keys())
 
 #
 # Create a hist to show series distribution by genre
