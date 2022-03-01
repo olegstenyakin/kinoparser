@@ -1,5 +1,6 @@
-
-
+#
+# Import
+#
 import requests
 from bs4 import BeautifulSoup as BS
 import re
@@ -42,10 +43,10 @@ c = Counter(genre)
 #
 # Create a hist to show series distribution by genre
 #
-f = plt.figure(figsize = (20, 10)) # Set figure size
-b = [x+n for n in range(0, len(c)) for x in [0.0, 1.0]]+[len(c)] # Set ticks positions on the center of each bin
-plt.hist(genre, rwidth=0.9, bins=b, align='left') # Create a hist
-plt.ylabel("Количество раз", size=22) # Set y label 
+f = plt.figure(figsize = (20, 10))                                # Set figure size
+b = [x+n for n in range(0, len(c)) for x in [0.0, 1.0]]+[len(c)]  # Set ticks positions on the center of each bin
+plt.hist(genre, rwidth=0.9, bins=b, align='left')                 # Create a hist
+plt.ylabel("Количество раз", size=22)                             # Set y label 
 plt.grid(axis='y')
 plt.show()
 
